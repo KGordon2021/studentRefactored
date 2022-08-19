@@ -1,0 +1,39 @@
+
+
+<div class="viewAll">
+  <h2>Students List</h2>
+
+  <div class="table">
+    <table>
+      <tr class="title">
+        <th>Student Name</th>
+        <th>Student Email</th>
+        <th>Cohort</th>
+        <th>Phone Number</th>
+        <th>Grades</th>
+        <th>Registration Fee</th>
+        <th style="background: lightslategrey">action</th>
+      </tr>
+      <tr *ngFor="let student of students">
+        <td>{{student.name}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.cohort}}</td>
+        <td>{{student.phoneNumber}}</td>
+        <td>{{student.grade}}</td>
+        <td>{{student.registrationFee}}</td>
+        <td> <a routerLink="/update/{{student._id}}"> Edit </a> | <button (click)="remove(student)">Delete</button> </td>
+      </tr>
+    </table>
+  </div>
+<!-- </div><div class="students" >
+ <h2>Hello World</h2>
+ <div *ngFor="let student of students">
+   <p>{{student.name}}</p>
+   <p>{{student.email}}</p>
+   <p>{{student.cohort}}</p>
+   <p>{{student.phoneNumber}}</p>
+   <p>{{student.grade}}</p>
+   <p>{{student.registrationFee}}</p>
+
+ </div>
+</div> -->

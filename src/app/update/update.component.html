@@ -1,0 +1,51 @@
+<div class="addStudent">
+  <form [formGroup]="updateStudent" novalidate action="">
+    <h2>Edit Student Records</h2>
+    <div class="row">
+      <label>Full Name</label>
+    <div>
+      <input type="text" formControlName="name" class="form-control" placeholder="">
+    </div>
+    </div>
+
+    <div class="row">
+      <label>Email</label>
+    <div>
+      <input type="text" formControlName="email" class="form-control">
+    </div>
+    </div>
+
+    <div class="row">
+      <label>Cohort</label>
+    <div>
+      <input type="text" formControlName="cohort" class="form-control">
+    </div>
+  </div>
+
+    <div class="row">
+      <label>Phone Number</label>
+    <div>
+      <input type="text" formControlName="phoneNumber" class="form-control">
+    </div>
+  </div>
+
+  <div class="row">
+    <label>Grade</label>
+  <div>
+    <input type="text" formControlName="grade" class="form-control">
+  </div>
+`</div>
+
+  <div class="row">
+    <label>Registration Fee</label>
+  <div>
+    <input type="number" formControlName="registrationFee" class="form-control">
+  </div>
+  </div>
+
+  <div class="btn">
+    <button type="submit" (click)="onSubmit()">Update Records</button>
+  </div>
+
+  </form>
+</div>
